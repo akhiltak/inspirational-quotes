@@ -1,24 +1,23 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# inspirational-quotes
 
-Things you may want to cover:
+Displays inspirational quotes in a rails app with changing quotes and background
 
-* Ruby version
+Project description:
 
-* System dependencies
+* Ruby version - 2.3.1
+
+* Rails version - 5.0.0.1 
 
 * Configuration
 
-* Database creation
-
-* Database initialization
+* Database creation and initialization
+ - rake db:create
+ - rake db:migrate
+ - rake db:seed
 
 * How to run the test suite
+ - rspec
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
