@@ -3,8 +3,6 @@
 
 Displays a slide-show of inspirational quotes with cycling background images in full-screen mode
 
-Project description:
-
 * Ruby version - 2.3.1
 
 * Rails version - 5.0.0.1 
