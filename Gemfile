@@ -13,7 +13,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-gem 'coffee-script-source', '= 1.11.1'
+# gem 'coffee-script-source', '= 1.11.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # For running tests, call rspec from project directory
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do

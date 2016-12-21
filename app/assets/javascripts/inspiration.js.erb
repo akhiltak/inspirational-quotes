@@ -1,0 +1,45 @@
+var stock_image = 'http://wallpaper-gallery.net/images/bing-wallpapers/bing-wallpapers-4.jpg';
+var images_url = [stock_image];
+carousel();
+
+function carousel() {
+	if (images_url.length <= 1) {
+		fetch_images();
+	}
+  var x = document.getElementById("cycle-image");
+  var lg = "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), "
+  x.style.backgroundImage = lg + "url('" + images_url.pop() + "')";
+
+  x = document.getElementById("display-text");
+
+  // do ajax call to backend to fetch next quote
+  $.ajax({
+  	method: "GET",
+  	url: "/inspiration/random_quote",
+  	data: {},
+  	dataType: 'JSON'
+  }).success(function(json){
+    x.innerHTML = json.quote + "<br><br> - " + json.author;
+    setTimeout(carousel, parseInt("<%= ENV['SLIDESHOW_TIMER_IN_SEC'] %>000"));
+  });
+}
+
+function fetch_images(){
+	$.ajax({
+  	method: "GET",
+  	url: "/inspiration/fetch_images",
+  	data: {},
+  	dataType: 'JSON'
+  }).success(function(json){
+  	if (json.length == 0) {
+  		images_url.push(stock_image);
+  	} else {
+  		images_url = images_url.concat(json);
+  	}
+  }).error(function(xhr, textStatus, error){
+  	console.log(xhr.statusText);
+    console.log(textStatus);
+    console.log(error);
+    images_url.push(stock_image);
+  });
+}

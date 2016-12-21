@@ -1,3 +1,30 @@
 // Place all the styles related to the Inspiration controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#cycle-image {
+	background-color: #9ab4ed;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transform: translate3d(0,0,0);
+	transition: background-image 1s ease-in-out;
+	height: 100vh;
+	width: 100vw;
+}
+
+#display-text {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 30px;
+	font-family: sans-serif;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+#body {
+	margin: 0;
+}

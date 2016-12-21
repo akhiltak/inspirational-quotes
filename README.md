@@ -1,7 +1,7 @@
 
 # inspirational-quotes
 
-Displays inspirational quotes in a rails app with changing quotes and background
+Displays inspirational quotes in a rails app with changing quotes and background in full-screen mode
 
 Project description:
 
@@ -9,7 +9,11 @@ Project description:
 
 * Rails version - 5.0.0.1 
 
-* Configuration
+* Configuration (How to run):
+ - Download rails application (Git-hub project)
+ - Replace Quotes seed file if required at the root folder(it's named Quotes.csv) 
+ - Run database creation and initialization as below (Seeding will take some some as there are a lot of quotes, will implemented batch processing in next iteration)
+ - 
 
 * Database creation and initialization
  - rake db:create
@@ -19,5 +23,4 @@ Project description:
 * How to run the test suite
  - rspec
 
-* Services (job queues, cache servers, search engines, etc.)
 
