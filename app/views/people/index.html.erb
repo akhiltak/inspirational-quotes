@@ -1,35 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+    
+  <h2>People</h2>
+  <br>
 
-<h1>People</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Born on</th>
-      <th>Profession</th>
-      <th>Died on</th>
-      <th>Country</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
+  <table class="table table-striped table-bordered">
+    <thead>
       <tr>
-        <td><%= person.name %></td>
-        <td><%= person.born_on %></td>
-        <td><%= person.profession %></td>
-        <td><%= person.died_on %></td>
-        <td><%= person.country %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Born on</th>
+        <th>Profession</th>
+        <th>Died on</th>
+        <th>Country</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @people.each do |person| %>
+        <tr>
+          <td><%= person.name %></td>
+          <td><%= person.born_on %></td>
+          <td><%= person.profession.humanize %></td>
+          <td><%= person.died_on %></td>
+          <td><%= person.country %></td>
+          <td><%= link_to 'Show', person, class: 'btn btn-link' %></td>
+          <td><%= link_to 'Edit', edit_person_path(person), class: 'btn btn-link' %></td>
+          <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?', class: 'btn btn-link' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Person', new_person_path %>
+  <br>
+
+  <%= link_to 'New Person', new_person_path, class: 'btn btn-link' %>
+
+</div>

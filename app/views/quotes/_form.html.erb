@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :genre %>
-    <%= f.number_field :genre %>
+    <%= f.select :genre, Quote.genres.keys.map {|key| [key.humanize, key]} %>
   </div>
 
   <div class="field">
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :status %>
-    <%= f.number_field :status %>
+    <%= f.select :status, Quote.statuses.keys.map {|key| [key.humanize, key]} %>
   </div>
 
   <div class="actions">

@@ -1,0 +1,2 @@
+module InspirationHelper
+end

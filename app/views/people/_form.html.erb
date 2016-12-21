@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :profession %>
-    <%= f.number_field :profession %>
+    <%= f.select :profession, Person.professions.keys.map {|key| [key.humanize, key]} %>
   </div>
 
   <div class="field">
