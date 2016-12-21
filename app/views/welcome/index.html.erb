@@ -1,10 +1,11 @@
-<div class="container-fluid">
+<div class="container" id="welcome">
 	
 	<h1>Inspirational Quotes Display</h1>
-	<h3>This application displays a motivational quote every 10 minutes</h3>
+	<h3>This application displays a motivational quote every <%= (ENV['SLIDESHOW_TIMER_IN_SEC'].to_i/60 == 0) ? ENV['SLIDESHOW_TIMER_IN_SEC'].to_s + " seconds" : (ENV['SLIDESHOW_TIMER_IN_SEC'].to_i/60).to_s + " minutes" %></h3>
 
-	<div class="container">
-		Visit the application demo here: <%= link_to 'Mantras of Life', inspiration_index_path %><br>
+	<div class="container" id="welcome-text">
+		Visit the application demo here: <%= link_to 'Mantras of Life', inspiration_index_path %>
+		<br><br>
 		Visit the github page <a href="https://github.com/akhiltak/inspirational-quotes" class=" btn-link">here</a>.
 	</div>
 
