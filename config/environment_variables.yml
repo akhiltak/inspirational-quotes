@@ -2,4 +2,4 @@ UNSPLASH_APP_ID: "51af75693c2d14e13ac5b74e636935afa2f66a3362be7e7b4ba4da353a2090
 UNSPLASH_APP_SECRET: "a5191f92f2af89f8659c198fe543073e265104a94d95c91b560a1dfb9505a670"
 UNSPLASH_APP_REDIRECT_URI: "urn:ietf:wg:oauth:2.0:oob"
 
-SLIDESHOW_TIMER_IN_SEC: "600" # the slide-show delay timer in seconds
+SLIDESHOW_TIMER_IN_SEC: "15" # the slide-show delay timer in seconds
